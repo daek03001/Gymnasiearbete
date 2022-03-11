@@ -1,0 +1,282 @@
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+/* Använder root varaibler för att göra det lättare att hitta i koden där jag kan använda mig av "var" */ 
+:root {
+    --color-primary: #6c63ff;
+    --color-success: #00bf8e;
+    --color-warning: #f7c94b;
+    --color-danger: #f75842;
+    --color-danger-variant: rgba(247, 88, 66, 0.4);
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.7);
+    --color-black: #000;
+    --color-bg: #1f2641; 
+    --color-bg1: #2e3267;
+    --color-bg2: #424890;
+
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%; 
+
+    --transition: all 400ms ease; 
+
+}
+
+/* 
+10px = 0.625rem
+12px = 0.75rem
+14px = 0.875rem
+16px = 1rem
+*/ 
+
+
+
+body {
+    font-family:'Montserrat', sans-serif;       /* Google Fonts använda */ 
+    line-height: 1.7;
+    color: var(--color-white);        /* Färgen för "Välkommen till denna sida */ 
+    background: var(--color-bg1); 
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto; 
+}
+
+section {
+    padding: 0rem;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1, h2, h3, h4, h5 {
+   line-height: 1.200;   
+
+}
+
+h1 {
+    font-size: 2.4rem;             /* Ändrar storleken på alla h-ettor  */ 
+}
+
+h2 {
+    font-size: 2rem;                /* Ändrar storleken på alla h-tvåor */ 
+}
+
+h3{
+    font-size: 1.6rem;              /* Ändrar storleken på alla h-treor */  
+}
+
+h4 {
+    font-size: 1.3rem;              /* Ändrar storleken på alla h-fyror */ 
+}
+
+a {
+    color: var(--color-white); 
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--color-white);
+    color: var(--color-black);
+    padding: 1rem 2rem; 
+    border: 1px solid transparent;
+    font-weight: 500; 
+}
+
+.btn:hover {        /* Detta är en klass för hover om du vill ändra färg när man drar över länkarna så ändra "White" */ 
+    background: transparent;
+    color: var(--color-white);
+    border-color:var(--color-white);
+}
+
+.btn-primary {
+    background: var(--color-danger);
+    color: var(--color-white);
+}
+
+/* ================== Media body ====================== */
+/* Ändrar bakgrundsfärg när du minskar skärmen */ 
+
+@media only screen and (max-width: 1050px) {
+	body {
+		background-color: #1f2641;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	body {
+		background-color:#6c63ff;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	body {
+		background-color:forestgreen;
+	}
+}
+
+/* ================== NAVBAR ====================== */ 
+
+nav {
+    background: transparent;
+    width: 100vw; 
+    height: 5rem;   /* 5rem = 80px */
+    position: fixed; 
+    top: 0;  /* Detta gör så att nav alltid visas på toppen av hemsidan */ 
+    z-index: 11; 
+}
+
+.nav_container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+nav button {
+    display: none;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav_menu a {
+    font-size: 0.9rem;
+    transition: var(--transition); /* Detta kommandot ändrar tiden för hovern att ändra färg 400ms rätt snabbt men om man ändrar det till 3sec eller 10 betydligt långsammare. */ 
+}
+
+.nav_menu a:hover{
+    color: var(--color-danger);     /* Ändrar färg när man drar över menyn */ 
+}
+
+/* Ändring av navbar färg när man scrollar */ 
+.window-scroll {
+    background: var(--color-bg2); 
+    box-shadow: 0 10rem 20rem rgba(0, 0, 0, 0.3); 
+
+}
+
+/*=================== Header ====================== */
+header {
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 70hv;
+    margin-bottom: 5rem; 
+    margin: 5rem 0 15rem;       /* Detta hjälper till att göra så att flera sidor skapas 15rem gör mellanrummet mellan båda sidorna, svårt att förklara men viktigt att ha koll på. */
+}
+
+.header_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;   /* 1fr 1fr bestämmer var bilden ska ligga på första sidan. Om man istället har */ 
+    align-items: center;
+    gap: 5rem; 
+    height: 100%
+}
+
+.header_vänstersida p {
+    margin: 1rem 0 2.4rem;
+}
+
+/*=================== kategorier ====================== */
+.kategorier {
+    background: var(--color-bg2);       /* Ändrar färg på backgrunden på kategorier */ 
+    height: 34rem;  /* 29rem standard */ 
+}
+
+.kategorier h1 {
+    line-height: 4;                     /* Hur nära catagorier ska vara Yeet */
+    margin-bottom: 3rem;
+
+}
+
+.kategorier_container {
+    display: grid;
+    grid-template-columns: 40% 60%;   /* Om du ändrar columnen där det står 40% så ändrar du var kolumen visas om du höjer till 100% så är kolumn långt åt höger sidan och den andra 60% om du ändrar den så påverkar det hur stor kolumnen är. */
+}
+
+.kategorier_vänstersida {
+    margin-right: 4rem;                 /* Detta ändrar om du vill ha texten på ett annat sätt. "Texten under Kategorier" Om du sänker numret till -10 för exempel så blir det mindre enterslag och texten lägger sig inne i kolumnen. Om du höjer till 100 så blir det mer enterslag och du läggs en bokstav på varje enterslag typ*/
+}
+.kategorier_vänstersida p {
+    margin: -4rem 0 3rem;                /* Hur nära p ska vara Catagorier hade 1rem men tyckte det var för långt mellan rum bättre med -4 samma som line-height 4 är på kategorier h1 */
+}
+
+.kategorier_högersida {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);      /* Denna grid-template-columns gör 3 */
+    gap: 1.2rem;
+    margin: 5rem 0 30rem; 
+}
+
+/*=================== Kategori ====================== */
+
+.kategori {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition); 
+}
+
+.kategori:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+}
+
+.kategori:nth-child(1) { /* Detta kommand specialiserar varje kolumn del "grid". Vi har sex stycken delar av kolumnen. Så om du vill ändra saker i varje kolumn så kan du skriva det i nth-child och sedan räkna vilken du vill ändra. */ 
+    background: var(--color-danger); /* Om du undrade hur man ändrar bakgrundsfärg för varje grid så ändrar man det här bara välj del du vill ändra och skriv in en annan färg om det inte passar. */ 
+}
+
+.kategori:nth-child(2) {
+    background: var(--color-success);
+}
+
+.kategori:nth-child(3) {
+    background: var(--color-warning);
+}
+
+.kategori:nth-child(4) {
+    background: var(--color-warning);
+}
+
+.kategori:nth-child(5) {
+    background: var(--color-danger);
+}
+
+.kategori:nth-child(6) {
+    background: var(--color-success);
+}
+
+/*=================== SPAN ====================== */
+/* Span färger vis del av texten */ 
+span { 
+    color: var(--color-danger); 
+
+}
+
+a:hover span {
+    color: var(--color-white);
+    font-size: 0.9rem;
+    transition: var(--transition); 
+}
