@@ -44,7 +44,7 @@
 body {
     font-family:'Montserrat', sans-serif;       /* Google Fonts använda */ 
     line-height: 1.7;
-    color: var(--color-white);        /* Färgen för "Välkommen till denna sida */ 
+    color: var(--color-white);        /* Färgen för "Välkommen till denna sida" */ 
     background: var(--color-bg1); 
 }
 
@@ -135,6 +135,7 @@ img {
 }
 
 /* ================== NAVBAR ====================== */ 
+/* Navbar är själva listan */ 
 
 nav {
     background: transparent;
@@ -203,7 +204,7 @@ header {
 /*=================== kategorier ====================== */
 .kategorier {
     background: var(--color-bg2);       /* Ändrar färg på backgrunden på kategorier */ 
-    height: 34rem;  /* 29rem standard */ 
+    height: 34rem;  /* 29rem standard testar 34rem för tilfället*/ 
 }
 
 .kategorier h1 {
@@ -275,8 +276,49 @@ span {
 
 }
 
+span1 {
+    color: var(--color-danger); 
+}
+
 a:hover span {
     color: var(--color-white);
     font-size: 0.9rem;
     transition: var(--transition); 
 }
+
+/*=================== Historia ====================== */
+.Historier {
+    margin-top: 10rem;
+    margin: 5rem 0 15rem; 
+}
+
+.Historia_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.Historia {
+    background: var(--color-bg1);
+    text-align: center;
+    border: 1px solid transparent; 
+    transition: var(--transition);
+}
+
+.Historia a:hover {
+    background: transparent; 
+    border-color: var(--color-primary);
+}
+
+.Histroia_info {
+    padding: 2rem; 
+}
+
+.Historia_info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+    
+}
+
+
+/* Problemet vi har nu är att bildarna och texten "Historia" ligger över den andra texten. Detta måste fixas. Skulle kunna vara något med margin att göra. 
