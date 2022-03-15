@@ -1,6 +1,3 @@
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -23,6 +20,8 @@
     --color-bg: #1f2641; 
     --color-bg1: #2e3267;
     --color-bg2: #424890;
+    --color-bg3: #800000; 
+    --color-bg4: #4b0082; 
 
     --container-width-lg: 80%;
     --container-width-md: 90%;
@@ -83,6 +82,8 @@ h4 {
     font-size: 1.3rem;              /* Ändrar storleken på alla h-fyror */ 
 }
 
+
+
 a {
     color: var(--color-white); 
 }
@@ -111,18 +112,20 @@ img {
 .btn-primary {
     background: var(--color-danger);
     color: var(--color-white);
+    margin: 10px; 
+
 }
 
-/* ================== Media body ====================== */
+/* ================== Media Queries Bakgrundsfärg  ====================== */
 /* Ändrar bakgrundsfärg när du minskar skärmen */ 
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1300px) {
 	body {
 		background-color: #1f2641;
 	}
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 900px) {
 	body {
 		background-color:#6c63ff;
 	}
@@ -133,6 +136,22 @@ img {
 		background-color:forestgreen;
 	}
 }
+
+/* ================== Media Queries Phone + Configuration ====================== */
+/* Gör den kompatibel med telefoner */ 
+
+@media only screen and (max-width: 760px) {
+    [class*="col-"] {
+    width: 100%;   
+    }
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px; 
+}
+
+
 
 /* ================== NAVBAR ====================== */ 
 /* Navbar är själva listan */ 
@@ -246,27 +265,45 @@ header {
 }
 
 .kategori:nth-child(1) { /* Detta kommand specialiserar varje kolumn del "grid". Vi har sex stycken delar av kolumnen. Så om du vill ändra saker i varje kolumn så kan du skriva det i nth-child och sedan räkna vilken du vill ändra. */ 
-    background: var(--color-danger); /* Om du undrade hur man ändrar bakgrundsfärg för varje grid så ändrar man det här bara välj del du vill ändra och skriv in en annan färg om det inte passar. */ 
+    background: var(--color-bg1); /* Om du undrade hur man ändrar bakgrundsfärg för varje grid så ändrar man det här bara välj del du vill ändra och skriv in en annan färg om det inte passar. */ 
+    background-image:url("JonasCool.jfif");
+    background-repeat: no-repeat;
+    background-size: 111%;
 }
 
 .kategori:nth-child(2) {
-    background: var(--color-success);
+    background: var(--color-bg2);
+    background-image:url("JonasCoolx2.jfif");
+    background-repeat: no-repeat;
+    background-size: 111%;
 }
 
 .kategori:nth-child(3) {
-    background: var(--color-warning);
+    background: var(--color-bg1);
+    background-image:url("JonasCool.jfif");
+    background-repeat: no-repeat;
+    background-size: 111%;
 }
 
 .kategori:nth-child(4) {
-    background: var(--color-warning);
+    background: var(--color-bg2);
+    background-image:url("JonasCoolx2.jfif");
+    background-repeat: no-repeat;
+    background-size: 111%;
 }
 
 .kategori:nth-child(5) {
-    background: var(--color-danger);
+    background: var(--color-bg1);
+    background-image:url("JonasCool.jfif");
+    background-repeat: no-repeat;
+    background-size: 111%;
 }
 
 .kategori:nth-child(6) {
-    background: var(--color-success);
+    background: var(--color-bg2);
+    background-image:url("JonasCoolx2.jfif");
+    background-repeat: no-repeat;
+    background-size: 111%;
 }
 
 /*=================== SPAN ====================== */
@@ -289,13 +326,15 @@ a:hover span {
 /*=================== Historia ====================== */
 .Historier {
     margin-top: 10rem;
-    margin: 5rem 0 15rem; 
+    margin: 10rem 0 15rem; 
+    line-height: 4;
+    
 }
 
 .Historia_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 5rem;
 }
 
 .Historia {
@@ -303,22 +342,68 @@ a:hover span {
     text-align: center;
     border: 1px solid transparent; 
     transition: var(--transition);
+    gap: 2rem;
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    
 }
 
 .Historia a:hover {
     background: transparent; 
     border-color: var(--color-primary);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    
 }
 
 .Histroia_info {
     padding: 2rem; 
+    
 }
 
 .Historia_info p {
     margin: 1.2rem 0 2rem;
     font-size: 0.9rem;
+   
+    
+}
+
+/*=================== Faq ====================== */
+.Faqs {  
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3 rgba(0, 0, 0, 0.5); 
+}
+
+.Faq {   
+    padding: 2rem; 
+    display: flex; 
+    align-items: left;
+    gap: 1.5rem;
+    height: fit-content;
+    cursor: pointer; 
+    background-color: var(--color-bg1);    
+
+
+}
+
+.Faq_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+}
+
+.Faq h4 {
+    line-height: 2.2;
+    font-size: 1.7rem; 
+}
+
+.Faq_icon {
+    align-self: flex-start; 
+    font-size: 1.2rem; 
+}
+
+.Faq p {
+    margin-top: 0.8rem; 
     
 }
 
 
-/* Problemet vi har nu är att bildarna och texten "Historia" ligger över den andra texten. Detta måste fixas. Skulle kunna vara något med margin att göra. 
