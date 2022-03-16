@@ -151,6 +151,11 @@ img {
     padding: 15px; 
 }
 
+@media only screen and (min-device-width: 480px){}
+
+
+
+
 
 
 /* ================== NAVBAR ====================== */ 
@@ -367,43 +372,60 @@ a:hover span {
 }
 
 /*=================== Faq ====================== */
-.Faqs {  
+.faqs {  
     background: var(--color-bg1);
-    box-shadow: inset 0 0 3 rgba(0, 0, 0, 0.5); 
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); 
 }
 
-.Faq {   
-    padding: 2rem; 
-    display: flex; 
-    align-items: left;
-    gap: 1.5rem;
-    height: fit-content;
-    cursor: pointer; 
-    background-color: var(--color-bg1);    
-
-
-}
-
-.Faq_container {
+.faqs_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
 
 }
 
-.Faq h4 {
-    line-height: 2.2;
-    font-size: 1.7rem; 
+.faq {   
+    padding: 2rem; 
+    display: flex; 
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    cursor: pointer; 
+    background-color: var(--color-bg2);    
+
+
 }
 
-.Faq_icon {
+.faq h4 {
+    line-height: 2.2;
+    font-size: 1rem; 
+}
+
+.faq_icon {
     align-self: flex-start; 
     font-size: 1.2rem; 
 }
 
-.Faq p {
+.faq p {
     margin-top: 0.8rem; 
+    display: none; 
+     
+    
     
 }
 
+.faq.open p {
+    display: block; 
+}
+
+/*=================== Footer ====================== */
+
+.Footer {
+
+}
+
+.Permalinks a:hover {
+    color: var(--color-success);
+    transition: var(--transition); 
+}
 
