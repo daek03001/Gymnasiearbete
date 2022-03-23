@@ -116,48 +116,6 @@ img {
 
 }
 
-/* ================== Media Queries Bakgrundsfärg  ====================== */
-/* Ändrar bakgrundsfärg när du minskar skärmen */ 
-
-@media only screen and (max-width: 1300px) {
-	body {
-		background-color: #1f2641;
-	}
-}
-
-@media only screen and (max-width: 900px) {
-	body {
-		background-color:#6c63ff;
-	}
-}
-
-@media only screen and (max-width: 650px) {
-	body {
-		background-color:forestgreen;
-	}
-}
-
-/* ================== Media Queries Phone + Configuration ====================== */
-/* Gör den kompatibel med telefoner */ 
-
-@media only screen and (max-width: 760px) {
-    [class*="col-"] {
-    width: 100%;   
-    }
-}
-
-[class*="col-"] {
-    float: left;
-    padding: 15px; 
-}
-
-@media only screen and (min-device-width: 480px){}
-
-
-
-
-
-
 /* ================== NAVBAR ====================== */ 
 /* Navbar är själva listan */ 
 
@@ -200,7 +158,6 @@ nav button {
 .window-scroll {
     background: var(--color-bg2); 
     box-shadow: 0 10rem 20rem rgba(0, 0, 0, 0.3); 
-
 }
 
 /*=================== Header ====================== */
@@ -234,7 +191,6 @@ header {
 .kategorier h1 {
     line-height: 4;                     /* Hur nära catagorier ska vara Yeet */
     margin-bottom: 3rem;
-
 }
 
 .kategorier_container {
@@ -278,9 +234,9 @@ header {
 
 .kategori:nth-child(2) {
     background: var(--color-bg2);
-    background-image:url("JonasCoolx2.jfif");
+    background-image:url("Network.jpg");
     background-repeat: no-repeat;
-    background-size: 111%;
+    background-size: 458%;
 }
 
 .kategori:nth-child(3) {
@@ -292,9 +248,9 @@ header {
 
 .kategori:nth-child(4) {
     background: var(--color-bg2);
-    background-image:url("JonasCoolx2.jfif");
+    background-image:url("Network.jpg");
     background-repeat: no-repeat;
-    background-size: 111%;
+    background-size: 458%;
 }
 
 .kategori:nth-child(5) {
@@ -306,16 +262,15 @@ header {
 
 .kategori:nth-child(6) {
     background: var(--color-bg2);
-    background-image:url("JonasCoolx2.jfif");
+    background-image:url("Network.jpg");
     background-repeat: no-repeat;
-    background-size: 111%;
+    background-size: 458%;
 }
 
 /*=================== SPAN ====================== */
 /* Span färger vis del av texten */ 
 span { 
     color: var(--color-danger); 
-
 }
 
 span1 {
@@ -333,7 +288,6 @@ a:hover span {
     margin-top: 10rem;
     margin: 10rem 0 15rem; 
     line-height: 4;
-    
 }
 
 .Historia_container {
@@ -349,39 +303,38 @@ a:hover span {
     transition: var(--transition);
     gap: 2rem;
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
-    
 }
 
 .Historia a:hover {
     background: transparent; 
     border-color: var(--color-primary);
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
-    
 }
 
 .Histroia_info {
     padding: 2rem; 
-    
 }
 
 .Historia_info p {
     margin: 1.2rem 0 2rem;
     font-size: 0.9rem;
-   
-    
 }
 
 /*=================== Faq ====================== */
 .faqs {  
     background: var(--color-bg1);
     box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); 
+    margin-bottom: 3rem; 
+}
+
+.faqs h2 {
+    line-height: 4;
 }
 
 .faqs_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-
 }
 
 .faq {   
@@ -391,14 +344,12 @@ a:hover span {
     gap: 1.4rem;
     height: fit-content;
     cursor: pointer; 
-    background-color: var(--color-bg2);    
-
-
+    background-color: var(--color-bg2);
 }
 
 .faq h4 {
     line-height: 2.2;
-    font-size: 1rem; 
+    font-size: 1rem;  
 }
 
 .faq_icon {
@@ -409,23 +360,305 @@ a:hover span {
 .faq p {
     margin-top: 0.8rem; 
     display: none; 
-     
-    
-    
 }
 
 .faq.open p {
     display: block; 
 }
 
+/*=================== Laget ====================== */
+.Laget {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); 
+    margin-bottom: 3rem;
+}
+
+.Laget h4 {
+    line-height: 2.2; 
+    font-size: 1rem; 
+}
+
+.Laget_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; 
+}
+
+.Medlem_Laget {          /* Ändrar allt förutom h2 */ 
+    background: var(--color-bg4);
+    padding: 2rem; 
+    border: 1px solid transparent; 
+    border-radius: 2rem; 
+    transition: var(--transition);
+    position: relative;
+}
+
+.Medlem_Laget a:hover {
+    background: transparent;
+    border-color: var(--color-success);
+}
+
+.Medlem_Laget-bild img {  /* Gör bilden svartvit med 0 */ 
+    filter: saturate(0); 
+}
+
+.Medlem_Laget:hover img{ /* blir färg när man drar musen över */ 
+    filter: saturate(1); 
+}
+
+.Medlem_Laget-information {
+    text-align: center;
+    margin-top: 1.4rem; 
+}
+
+.Medlem_Laget-information{
+    color: var(--color-light);
+}
+
+.Medlem_Laget-Sociala{
+    position: absolute; 
+    top: 50%;
+    overflow: hidden;
+    right: -100%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.Medlem_Laget:hover 
+.Medlem_Laget-Sociala {
+    right:0; 
+}
+
+.Medlem_Laget-Sociala a {
+    padding: 1rem; 
+}
+
+
+
 /*=================== Footer ====================== */
 
-.Footer {
-
+.footer {
+    background: var(--color-bg4);
+    padding-top: 5rem;
+    padding: 2rem;  
 }
+
+.footer_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem; 
+}
+
+.footer_container > div h4 {
+    margin-bottom: 1.2rem;
+}
+
+footer ul li {
+    margin-bottom: 0.7rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline; 
+}
+
+.footer h4 {
+    line-height: 2.2;
+    font-size: 1rem; 
+}
+
 
 .Permalinks a:hover {
     color: var(--color-success);
     transition: var(--transition); 
+}
+/*=================== Footer_1 ====================== */
+
+.footer_1 h4 {
+    color: var(--color-black);
+}
+.footer_1 p {
+    margin: 0 0 2rem; 
+}
+
+/*=================== Footer_2 ====================== */
+
+.footer_2 h4 {
+    color: var(--color-black);
+}
+
+/*=================== Footer_3 ====================== */
+
+.footer_3 h4 {
+    color: var(--color-black);
+}
+
+.Privacy li a {
+    color: var(--color-success);
+}
+
+.Privacy a:hover {
+    color: var(--color-success); 
+    transition: var(--transition); 
+}
+
+/*=================== Footer_4 ====================== */
+
+.footer_4 h4 {
+    color: var(--color-black);
+}
+
+
+
+/* ================== Media Queries Color ====================== */
+/* Ändrar färg på sidorna när sidan förminskas */ 
+
+@media only screen and (max-width: 1300px) {
+	body {
+		background-color: #1f2641;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	body {
+		background-color:#6c63ff;
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	body {
+		background-color:forestgreen;
+	}
+}
+
+/* ================== Media Queries Compabilitiet för andra enheter ====================== */
+
+@media screen and (max-width: 1024px) {
+    .container {   
+        width: var(--container-width-md);
+    }
+
+    h1 {
+    font-size: 2.4rem;
+    }
+
+    h2 {
+    font-size: 1.7rem; 
+    }
+
+    h3 {
+    font-size: 1.4rem; 
+    }
+
+    h4 {
+    font-size: 1.2rem; 
+}
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+
+
+    
+ /*=================== Navbar Media Query ====================== */
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--color-white);
+        cursor: pointer;
+    }
+
+    nav button#close-menu-btn {
+        display: none;
+    }
+
+    .nav_menu {
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content; 
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none; 
+    }
+
+    .nav_menu li {
+        width: 100%;
+        height:  5.8rem;  
+    }
+
+    .nav_menu li a {
+        background: var(--color-primary);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .nav_menu li a:hover {
+        background: var(--color-bg2);
+        color: var(--color-white);
+    }
+}
+}
+/*=================== Laget Media Query IPAD ====================== */ 
+@media screen and (max-width: 600px) {
+/*=================== Navbar Media Query IPAD ====================== */
+    .nav_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem; 
+    }
+
+ /*=================== Header Media Query IPAD ====================== */
+    .header_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+/*=================== Kategorier Media Query IPAD ====================== */
+    .kategorier_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+/*=================== Historia Media Query IPAD ====================== */
+    .Historia_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem; 
+    }
+
+/*=================== Faq Media Query IPAD ====================== */
+    .faqs_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+/*=================== Laget Media Query IPAD ====================== */
+
+    .Laget_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }   
+
+    .Medlem_Laget {
+        padding: 0;
+    }
+
+    .Medlem_Laget p {
+        margin-bottom: 1.5rem; 
+    }
+/*=================== Footer Media Query IPAD ====================== */
+    .footer_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
 }
 
