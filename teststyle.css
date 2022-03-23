@@ -285,8 +285,16 @@ a:hover span {
 
 /*=================== Historia ====================== */
 .Historier {
-    margin-top: 10rem;
-    margin: 10rem 0 15rem; 
+    
+    margin: 15rem 0 15rem; 
+    line-height: 3;
+    background: var(--color-bg2); 
+    height: 50rem;
+    margin-top: 25rem;
+     
+}
+
+.Historier h2 {
     line-height: 4;
 }
 
@@ -445,7 +453,8 @@ a:hover span {
 .footer {
     background: var(--color-bg4);
     padding-top: 5rem;
-    padding: 2rem;  
+    padding: 2rem; 
+    margin-top: 50rem;
 }
 
 .footer_container {
@@ -661,4 +670,3 @@ footer ul li a:hover {
     }
 
 }
-
