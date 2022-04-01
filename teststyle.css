@@ -182,6 +182,24 @@ header {
     margin: 1rem 0 2.4rem;
 }
 
+.header_VänsterHistoriaText{
+    margin: 1rem 0 2.4rem;
+    
+
+}
+
+.header_HögerHistoriaText {
+    margin: 0;
+}
+
+.header_HögerHistoria-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+       
+}
+
+
 /*=================== kategorier ====================== */
 .kategorier {
     background: var(--color-bg2);       /* Ändrar färg på backgrunden på kategorier */ 
