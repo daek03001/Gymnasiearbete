@@ -45,6 +45,7 @@ body {
     line-height: 1.7;
     color: var(--color-white);        /* Färgen för "Välkommen till denna sida" */ 
     background: var(--color-bg1); 
+     
 }
 
 .container {
@@ -57,7 +58,7 @@ section {
 }
 
 section h2 {
-    text-align: center;
+    text-align: center;            /* Var jag placerar min section h2 text */ 
     margin-bottom: 4rem;
 }
 
@@ -168,6 +169,8 @@ header {
     height: 70hv;
     margin-bottom: 5rem; 
     margin: 5rem 0 15rem;       /* Detta hjälper till att göra så att flera sidor skapas 15rem gör mellanrummet mellan båda sidorna, svårt att förklara men viktigt att ha koll på. */
+    
+    
 }
 
 .header_container {
@@ -175,30 +178,12 @@ header {
     grid-template-columns: 1fr 1fr ;   /* 1fr 1fr bestämmer var bilden ska ligga på första sidan. Om man istället har */ 
     align-items: center;
     gap: 5rem; 
-    height: 100%
+    height: 100%;
 }
 
 .header_vänstersida p {
     margin: 1rem 0 2.4rem;
 }
-
-.header_VänsterHistoriaText{
-    margin: 1rem 0 2.4rem;
-    
-
-}
-
-.header_HögerHistoriaText {
-    margin: 0;
-}
-
-.header_HögerHistoria-img {
-    height: 100%;
-    width: 100%;
-    position: relative;
-       
-}
-
 
 /*=================== kategorier ====================== */
 .kategorier {
@@ -251,7 +236,7 @@ header {
 }
 
 .kategori:nth-child(2) {
-    background: var(--color-bg2);
+    background: var(--color-bg1);
     background-image:url("Network.jpg");
     background-repeat: no-repeat;
     background-size: 458%;
@@ -265,7 +250,7 @@ header {
 }
 
 .kategori:nth-child(4) {
-    background: var(--color-bg2);
+    background: var(--color-bg1);
     background-image:url("Network.jpg");
     background-repeat: no-repeat;
     background-size: 458%;
@@ -279,7 +264,7 @@ header {
 }
 
 .kategori:nth-child(6) {
-    background: var(--color-bg2);
+    background: var(--color-bg1);
     background-image:url("Network.jpg");
     background-repeat: no-repeat;
     background-size: 458%;
@@ -303,13 +288,10 @@ a:hover span {
 
 /*=================== Historia ====================== */
 .Historier {
-    
     margin: 15rem 0 15rem; 
     line-height: 3;
-    background: var(--color-bg2); 
     height: 50rem;
-    margin-top: 25rem;
-     
+    margin-top: 10rem;   
 }
 
 .Historier h2 {
@@ -319,7 +301,7 @@ a:hover span {
 .Historia_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .Historia {
@@ -329,15 +311,16 @@ a:hover span {
     transition: var(--transition);
     gap: 2rem;
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    
 }
 
-.Historia a:hover {
+.Historia:hover {
     background: transparent; 
     border-color: var(--color-primary);
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
 }
 
-.Histroia_info {
+.Historia_info {
     padding: 2rem; 
 }
 
@@ -346,11 +329,30 @@ a:hover span {
     font-size: 0.9rem;
 }
 
+
+/*=================== Historia för historie sidan ====================== */
+.Historier-sida {
+    margin: 15rem 0 15rem; 
+    line-height: 3;
+    background: var(--color-bg4); 
+    height: 110rem;
+    margin-top: 10rem;
+    
+     
+}
+
+.Historier-sida h2 {
+    line-height: 4;
+}
+
 /*=================== Faq ====================== */
 .faqs {  
-    background: var(--color-bg1);
-    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); 
-    margin-bottom: 3rem; 
+    background: var(--color-bg2);
+    margin: 15rem 0 15rem; 
+    line-height: 3;
+    height: 85rem;
+    margin-top: 25rem; 
+    
 }
 
 .faqs h2 {
@@ -370,7 +372,8 @@ a:hover span {
     gap: 1.4rem;
     height: fit-content;
     cursor: pointer; 
-    background-color: var(--color-bg2);
+    background-color: var(--color-bg1);
+    
 }
 
 .faq h4 {
@@ -394,15 +397,18 @@ a:hover span {
 
 /*=================== Laget ====================== */
 .Laget {
-    background: var(--color-bg1);
-    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5); 
-    margin-bottom: 3rem;
+    background: var(--color-bg2);
+    margin: 15rem 0 15rem; 
+    line-height: 3;
+    height: 85rem;
+    margin-top: 25rem; 
 }
 
-.Laget h4 {
+.Laget h2 {
     line-height: 2.2; 
-    font-size: 1rem; 
+    
 }
+
 
 .Laget_container {
     display: grid;
@@ -411,12 +417,13 @@ a:hover span {
 }
 
 .Medlem_Laget {          /* Ändrar allt förutom h2 */ 
-    background: var(--color-bg4);
+    background: var(--color-bg1);
     padding: 2rem; 
     border: 1px solid transparent; 
     border-radius: 2rem; 
     transition: var(--transition);
     position: relative;
+    overflow: hidden;
 }
 
 .Medlem_Laget a:hover {
@@ -441,28 +448,7 @@ a:hover span {
     color: var(--color-light);
 }
 
-.Medlem_Laget-Sociala{
-    position: absolute; 
-    top: 50%;
-    overflow: hidden;
-    right: -100%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    background: var(--color-primary);
-    border-radius: 1rem 0 0 1rem;
-    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
-    transition: var(--transition);
-}
 
-.Medlem_Laget:hover 
-.Medlem_Laget-Sociala {
-    right:0; 
-}
-
-.Medlem_Laget-Sociala a {
-    padding: 1rem; 
-}
 
 
 
@@ -472,7 +458,7 @@ a:hover span {
     background: var(--color-bg4);
     padding-top: 5rem;
     padding: 2rem; 
-    margin-top: 50rem;
+    
 }
 
 .footer_container {
@@ -544,23 +530,6 @@ footer ul li a:hover {
 /* ================== Media Queries Color ====================== */
 /* Ändrar färg på sidorna när sidan förminskas */ 
 
-@media only screen and (max-width: 1300px) {
-	body {
-		background-color: #1f2641;
-	}
-}
-
-@media only screen and (max-width: 900px) {
-	body {
-		background-color:#6c63ff;
-	}
-}
-
-@media only screen and (max-width: 650px) {
-	body {
-		background-color:forestgreen;
-	}
-}
 
 /* ================== Media Queries Compabilitiet för andra enheter ====================== */
 
@@ -583,15 +552,8 @@ footer ul li a:hover {
 
     h4 {
     font-size: 1.2rem; 
-}
-@media screen and (max-width: 600px) {
-    .container {
-        width: var(--container-width-sm);
     }
 
-
-
-    
  /*=================== Navbar Media Query ====================== */
     nav button {
         display: inline-block;
@@ -634,45 +596,140 @@ footer ul li a:hover {
         background: var(--color-bg2);
         color: var(--color-white);
     }
-}
-}
-/*=================== Laget Media Query IPAD ====================== */ 
-@media screen and (max-width: 600px) {
-/*=================== Navbar Media Query IPAD ====================== */
-    .nav_container {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem; 
+
+    /*=================== Header ====================== */
+    header {
+        height: 52vh;
+        margin-bottom: 4rem;
     }
 
- /*=================== Header Media Query IPAD ====================== */
     .header_container {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem;
+        gap: 0;
+        padding-bottom: 3rem;
+        
+    }
+    /*=================== Kategorier ====================== */
+
+    .kategorier {
+        height: auto;
     }
 
-/*=================== Kategorier Media Query IPAD ====================== */
     .kategorier_container {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem;
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
-/*=================== Historia Media Query IPAD ====================== */
+
+    .kategorier_vänstersida {
+        margin-right: 0;
+        
+    }
+    /*=================== Historia ====================== */
+
+    .Historier  {
+        margin-top: 0;
+
+    }
+
     .Historia_container {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .Historier-sida {
+        height: 166rem;
+    }
+
+    /*=================== FAQs ====================== */
+    .faqs_container {
+        grid-template-columns: 1fr;
+    }
+
+    .faq {
+        padding: 1.5rem;
+    }
+
+    .faqs {
+        height: 95rem;
+    }
+
+
+    /*=================== Footer ====================== */
+    .footer_container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /*=================== Laget ====================== */
+    .Laget_container {
+        grid-template-columns: repeat(3,1fr);
+        gap: 1.5;
+    }
+
+    .Medlem_Laget {
+        padding: 1rem;
+    }
+
+}
+
+/*=================== Media Queries Telefon ====================== */   
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+    /*=================== Navbar ====================== */ 
+    .nav_menu {
+        right: 3%;
+    }
+
+    /*=================== Header ====================== */ 
+    header {
+        height: 100vh;
+    }
+
+    .header_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+
+    }
+
+    .header_vänstersida p {
+        margin-bottom: 1.3rem; 
+    }
+
+    /*=================== Kategorier ====================== */ 
+    .kategorier_högersida {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .kategori {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    /*=================== Historia ====================== */ 
+    .Historia_container {
+        grid-template-columns: 1fr;
+    }
+
+    .Historier {
+        height: 105rem;
+    }
+
+    .Historier-sida {
+        height: 284rem;  
+       margin-top: 6rem;
+    }
+    
+
+    /*=================== Laget ====================== */ 
+    .Laget_container {
+        grid-template-columns: 1fr 1fr;
         gap: 0.7rem; 
     }
 
-/*=================== Faq Media Query IPAD ====================== */
-    .faqs_container {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem;
+    .Laget {
+        height: 106rem;
     }
-
-/*=================== Laget Media Query IPAD ====================== */
-
-    .Laget_container {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem;
-    }   
 
     .Medlem_Laget {
         padding: 0;
@@ -681,10 +738,19 @@ footer ul li a:hover {
     .Medlem_Laget p {
         margin-bottom: 1.5rem; 
     }
-/*=================== Footer Media Query IPAD ====================== */
+
+
+
+    /*=================== Footer ====================== */ 
     .footer_container {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.7rem;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+
     }
 
+    .footer_1 p {
+        margin: 1rem auto;
+    }
 }
+
