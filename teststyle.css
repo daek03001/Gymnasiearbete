@@ -1,34 +1,32 @@
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
+*{ /* Denna tabben visar vad som ska vara satt för hemsidan innan man börjar koda. */ 
+    margin: 0;      /* Detta är mellanrummet runtomkring elementets gräns. Vi skriver att den gränsen ska vara 0 från början.  */  
+    padding: 0;     /* Padding genererar ett utrymme runtomkring elementets innehåll, inne i definerade gränser. */
+    border: 0;      /* Border används för att sätta gränsen på ett element. */ 
+    outline: 0;     /* Detta är linjen som är skriven runt element */
+    text-decoration: none;      /* Ändrar textens decoration som text-decoration: "overline" som gör så att det blir ett streck över elementet. */
+    list-style: none;           /* Används när man ska styla sin lista. Så här vill jag inte att listan ska bli stylad så om jag vill kan jag göra det senare.  */ 
+    box-sizing: border-box;     /* Sätter totala höjd och bred på ett element. Border-box elementet gör så att padding och border inkluderas i höjd och bred. */ 
 }
-/* Använder root varaibler för att göra det lättare att hitta i koden där jag kan använda mig av "var" */ 
+/* Använder root varaibler för att göra det lättare att hitta i koden. Det gör det mycket lättare att skriva färgerna på ett smidigt sätt.  */ 
 :root {
-    --color-primary: #6c63ff;
+    --color-primary: #6c63ff;       /* Detta är en variabel för färg som används till text färg alla nedan förutom bg. */
     --color-success: #00bf8e;
     --color-warning: #f7c94b;
     --color-danger: #f75842;
-    --color-danger-variant: rgba(247, 88, 66, 0.4);
     --color-white: #fff;
     --color-light: rgba(255, 255, 255, 0.7);
-    --color-black: #000;
-    --color-bg: #1f2641; 
+    --color-black: #000;            
+    --color-bg: #1f2641;            /* Heter "bg" eftersom används för att specifisera bakgrunden på ett element. Därför du kan hitta många bg färger i min root. Ville specifisera så att man vet att den färgen används till bakgrunden.  */
     --color-bg1: #2e3267;
     --color-bg2: #424890;
     --color-bg3: #800000; 
     --color-bg4: #4b0082; 
 
-    --container-width-lg: 80%;
+    --container-width-lg: 80%;   /* Detta ändrar bredden på containrarna. Bra när man håller på med media queries eftersom jag kan välja om du vill ha small, medium eller large i bredd. Har använt detta mycket i containrar som du kan se där nere. */ 
     --container-width-md: 90%;
     --container-width-sm: 94%; 
 
-    --transition: all 400ms ease; 
-
+    --transition: all 400ms ease; /*När detta kommando används så ändras transaktionen mellan två element. Svårt att förklara utan att visa. Jallafall varje gång du går över elementet med det här kommandot så kommer den minskas och det är då hastigheten den minskas så om man ändrar till 10sec så tar det 10 sekunder att minska elementet. */ 
 }
 
 /* 
@@ -38,33 +36,29 @@
 16px = 1rem
 */ 
 
-
-
 body {
     font-family:'Montserrat', sans-serif;       /* Google Fonts använda */ 
-    line-height: 1.7;
+    line-height: 1.7;                  /* Ändrar hur hög linen ska vara så om denna ändras til 100 så kommer den bli hundra lång och ta över hela skärmen. */ 
     color: var(--color-white);        /* Färgen för "Välkommen till denna sida" */ 
-    background: var(--color-bg1); 
-     
+    background: var(--color-bg1);      /* Bakgrundsfärgen till bodyn. */    
 }
 
 .container {
-    width: var(--container-width-lg);
-    margin: 0 auto; 
+    width: var(--container-width-lg);   /* Som här väljer jag att den här containern att bredden ska vara small "80%" */ 
+    margin: 0 auto;     /* Detta betyder i sin tur att hemsidan ska bestämma marginen själv och vi ska inte lägga oss i. */ 
 }
 
 section {
-    padding: 0rem;
+    padding: 0rem;      /* Här har vi skrivit padding: 0rem och det är därför att vi inte vill ha någon padding "ett utrymme runtomkring ett element". Så vi specifiserar att det inte ska finnas så att det inte läggs till automatiskt. */ 
 }
 
 section h2 {
     text-align: center;            /* Var jag placerar min section h2 text */ 
-    margin-bottom: 4rem;
+    margin-bottom: 4rem;           /* Hur stor jag vill att margins nedre del av section, h2 ska vara. */ 
 }
 
 h1, h2, h3, h4, h5 {
-   line-height: 1.200;   
-
+   line-height: 1.200;          /* Specifiserar vad min line-height ska vara på alla h-taggar.  */ 
 }
 
 h1 {
@@ -83,34 +77,32 @@ h4 {
     font-size: 1.3rem;              /* Ändrar storleken på alla h-fyror */ 
 }
 
-
-
 a {
-    color: var(--color-white); 
+    color: var(--color-white);  /* Färgen på a taggen */
 }
 
-img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
+img {       /* Denna tagen används i bilder */ 
+    width: 100%;        /* Bredden ska vara 100% */
+    display: block;     /*Börjar på en ny sida och tar upp skärmens bredd */ 
+    object-fit: cover;  /* Sätter hur innehållet av img/video bör storlekändras för att passa dess behållare. Finns: "fill, contain, cover, none, scale-down osv."  */
 }
 
 .btn {
-    display: inline-block;
+    display: inline-block;      /* Tillåter oss att sätta bredd och höjd på elementet */ 
     background: var(--color-white);
     color: var(--color-black);
     padding: 1rem 2rem; 
-    border: 1px solid transparent;
-    font-weight: 500; 
+    border: 1px solid transparent;      /* Detta gör så att det blir 1px gränst runtom .btn */ 
+    font-weight: 500;       /*Sätter kortleken på texten desto högre desto större blir textens storlek. */  
 }
 
 .btn:hover {        /* Detta är en klass för hover om du vill ändra färg när man drar över länkarna så ändra "White" */ 
-    background: transparent;
-    color: var(--color-white);
-    border-color:var(--color-white);
+    background: transparent;        /* bakgrund transparent den tillåter så att det inte behövs en bakgrundsfärg, ljus färg i bakgrunden. Är ingen bakgrundsfärg. */  
+    color: var(--color-white);      
+    border-color:var(--color-white);        /* Gränsens färg på btn när man drar musen över. */
 }
 
-.btn-primary {
+.btn-primary { /* Detta är stylingen för Lär dig mer på första sidan */ 
     background: var(--color-danger);
     color: var(--color-white);
     margin: 10px; 
@@ -122,33 +114,33 @@ img {
 
 nav {
     background: transparent;
-    width: 100vw; 
-    height: 5rem;   /* 5rem = 80px */
-    position: fixed; 
-    top: 0;  /* Detta gör så att nav alltid visas på toppen av hemsidan */ 
-    z-index: 11; 
+    width: 100vw;       /* Detta är användbart när man skapar element som ska fylla hela viewporten som navens 100vh gör. */ 
+    height: 5rem;       /* 5rem = 80px */
+    position: fixed;        /* Gör så att nav stannar i samma position funkar även när man scrollar. */
+    top: 0;        /* Detta gör så att nav alltid visas på toppen av hemsidan */ 
+    z-index: 11;        /* Används för att definera ordern för element om de overlapar varandra. */ 
 }
 
-.nav_container {
-    height: 100%;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+.nav_container { 
+    height: 100%;       /* Höjden på nav_container är 100% */ 
+    display: flex;      /* Ställer in den flexibala längden på flexibla föremål */ 
+    justify-content: space-between;     /* "justify-content" = justerar den flexibla behållarens objekt när objektet inte använder allt tillgängligt utrymme. "space-between" = Gör så att mellan de olika listorna i nav blir ett par mellan slag ifrån varandra. */ 
+    align-items: center;        /* Är justering för objekt inuti den flexibila behållaren */ 
 }
 
-nav button {
-    display: none;
+nav button {        /* Button för bars, multiply nav */  
+    display: none; /* Detta är ett kommand som gör så att nav button inte kommer displaya något. Om denna inte hade funnits hade "bars, multiply" visats. */ 
 }
 
-.nav_menu {
+.nav_menu {        
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 4rem;  /* gapet mellan element */  
 }
 
 .nav_menu a {
-    font-size: 0.9rem;
-    transition: var(--transition); /* Detta kommandot ändrar tiden för hovern att ändra färg 400ms rätt snabbt men om man ändrar det till 3sec eller 10 betydligt långsammare. */ 
+    font-size: 0.9rem;      /* Ändrar textstorlek på nav_menu a */       
+    transition: var(--transition);      /* Detta kommandot ändrar tiden för hovern att ändra färg 400ms rätt snabbt men om man ändrar det till 3sec eller 10 betydligt långsammare. */ 
 }
 
 .nav_menu a:hover{
@@ -156,17 +148,17 @@ nav button {
 }
 
 /* Ändring av navbar färg när man scrollar */ 
-.window-scroll {
+/* Denna delen av koden är kopplat till ett javascript som jag har konstruerat */ 
+.window-scroll { 
     background: var(--color-bg2); 
-    box-shadow: 0 10rem 20rem rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 10rem 20rem rgba(0, 0, 0, 0.3);       /* Lägger till en skuggeffekt runtomkring ett element */ 
 }
 
 /*=================== Header ====================== */
 header {
-    position: relative;
-    top: 5rem;
-    overflow: hidden;
-    height: 70hv;
+    position: relative;     /* Ett element med postion relative är positionerad relativt nära den normala postionen. */  
+    top: 5rem;      /* Toppen av sidan ska vara 5rem */ 
+    overflow: hidden;       /* overflow kommandot specifiserar om man ska klippa sidan eller lägga till en scrollbar när den blir för stor. Overflow hidden visar endast sidan ingen scrollbar alls. */ 
     margin-bottom: 5rem; 
     margin: 5rem 0 15rem;       /* Detta hjälper till att göra så att flera sidor skapas 15rem gör mellanrummet mellan båda sidorna, svårt att förklara men viktigt att ha koll på. */
     
@@ -174,7 +166,7 @@ header {
 }
 
 .header_container {
-    display: grid;
+    display: grid;      /* Visar griden för header_container */    
     grid-template-columns: 1fr 1fr ;   /* 1fr 1fr bestämmer var bilden ska ligga på första sidan. Om man istället har */ 
     align-items: center;
     gap: 5rem; 
@@ -185,7 +177,7 @@ header {
     margin: 1rem 0 2.4rem;
 }
 
-/*=================== kategorier ====================== */
+/*=================== kategorier ====================== (Teknik)*/ 
 .kategorier {
     background: var(--color-bg2);       /* Ändrar färg på backgrunden på kategorier */ 
     height: 34rem;  /* 29rem standard testar 34rem för tilfället*/ 
@@ -195,6 +187,8 @@ header {
     line-height: 4;                     /* Hur nära catagorier ska vara Yeet */
     margin-bottom: 3rem;
 }
+
+
 
 .kategorier_container {
     display: grid;
@@ -214,25 +208,26 @@ header {
     gap: 1.2rem;
     margin: 5rem 0 30rem; 
 }
-
 /*=================== Kategori ====================== */
 
 .kategori {
     background: var(--color-bg2);
     padding: 2rem;
-    border-radius: 2rem;
+    border-radius: 2rem;        /* Detta kommando bestämmer radiusen för elementets hörn. */ 
     transition: var(--transition); 
+    
 }
 
 .kategori:hover {
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
 }
 
+/* kategori:nth-child() är ett barn kommando av kategori och delar upp den i 6 delar. */ 
 .kategori:nth-child(1) { /* Detta kommand specialiserar varje kolumn del "grid". Vi har sex stycken delar av kolumnen. Så om du vill ändra saker i varje kolumn så kan du skriva det i nth-child och sedan räkna vilken du vill ändra. */ 
     background: var(--color-bg1); /* Om du undrade hur man ändrar bakgrundsfärg för varje grid så ändrar man det här bara välj del du vill ändra och skriv in en annan färg om det inte passar. */ 
     background-image:url("JonasCool.jfif");
-    background-repeat: no-repeat;
-    background-size: 111%;
+    background-repeat: no-repeat;       /* Om man har på detta kommando så blir bilden repeatad man ser den igen och igen. Detta ville jag inte ha så vi körde no-repeat på den. */ 
+    background-size: 111%;      /* Ändrar bakgrundens storlek */ 
 }
 
 .kategori:nth-child(2) {
@@ -269,6 +264,112 @@ header {
     background-repeat: no-repeat;
     background-size: 458%;
 }
+/*=================== Tekniksida ====================== */
+/*=================== Header ====================== */
+.header_container {
+    text-align: center;
+    margin-top: -160;   /* Margin-top -160 storleken på header och var den kommer bli placerad */ 
+
+}
+
+.header_Teknikrubrik {
+    margin-top: -30rem;
+    background: var(--color-bg2);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    
+    
+
+}
+
+/*=================== Teknik ====================== */
+.tekniksida-1 {
+    margin: 10rem 0 10rem; /* Denna marginen är lite rolig den gör ett mellanrum i bakgrundsfärgen så de byter färg från en mörkare till ljusare till mörkare. */ 
+    background: var(--color-bg1);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+   
+
+}
+
+.tekniksida-2 {
+    margin: 15rem 0 15rem;
+    background: var(--color-bg1); 
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+   
+}
+
+.tekniksida-3 {
+    margin: 15rem 0 15rem; 
+    background: var(--color-bg1);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+   
+}
+.tekniksida-4 {
+    margin: 15rem 0 15rem;
+    background: var(--color-bg1);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+   
+}
+.tekniksida-5 {
+    margin: 15rem 0 15rem;
+    background: var(--color-bg1);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+    
+}
+
+
+.tekniksida-6 {
+    margin: 15rem 0 15rem;
+    background: var(--color-bg1);
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+    
+    
+  
+}
+.tekniksidor {
+    background: var(--color-bg2);
+    margin-top: -20rem;
+    line-height: 10;
+}
+
+.tekniksidor h1   {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.tekniksidor h2  {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.h2p h2  {
+    margin-top: 3rem;
+}
+
+
+.tekniksidor p {
+    margin-top: 1.3rem;
+}
+
+.tekniksida-1:nth-child(1) {
+    font-size: 1rem; 
+}
+
+.tekniksida-1:nth-child(2) {
+    font-size: 1.5rem;
+}
+
+.tekniksida-1:nth-child(3) {
+    font-size: 2rem;
+
+}
+
+.tekniksidor p {
+    text-align: center;
+}
+.tekniksidor_container {
+    display: grid;
+    
+}
 
 /*=================== SPAN ====================== */
 /* Span färger vis del av texten */ 
@@ -290,8 +391,10 @@ a:hover span {
 .Historier {
     margin: 15rem 0 15rem; 
     line-height: 3;
-    height: 50rem;
+    height: 500rem;
     margin-top: 10rem;   
+    background: var(--color-bg2);
+    
 }
 
 .Historier h2 {
@@ -305,17 +408,18 @@ a:hover span {
 }
 
 .Historia {
-    background: var(--color-bg1);
+    background: var(--color-bg2);
     text-align: center;
     border: 1px solid transparent; 
     transition: var(--transition);
     gap: 2rem;
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+
     
 }
 
 .Historia:hover {
-    background: transparent; 
+    background: var(--color-bg1);
     border-color: var(--color-primary);
     box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
 }
@@ -328,17 +432,14 @@ a:hover span {
     margin: 1.2rem 0 2rem;
     font-size: 0.9rem;
 }
-
-
 /*=================== Historia för historie sidan ====================== */
+
 .Historier-sida {
     margin: 15rem 0 15rem; 
     line-height: 3;
     background: var(--color-bg4); 
     height: 110rem;
-    margin-top: 10rem;
-    
-     
+    margin-top: 10rem;   
 }
 
 .Historier-sida h2 {
@@ -352,7 +453,6 @@ a:hover span {
     line-height: 3;
     height: 85rem;
     margin-top: 25rem; 
-    
 }
 
 .faqs h2 {
@@ -409,7 +509,6 @@ a:hover span {
     
 }
 
-
 .Laget_container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -447,10 +546,6 @@ a:hover span {
 .Medlem_Laget-information{
     color: var(--color-light);
 }
-
-
-
-
 
 /*=================== Footer ====================== */
 
@@ -525,8 +620,6 @@ footer ul li a:hover {
     color: var(--color-black);
 }
 
-
-
 /* ================== Media Queries Color ====================== */
 /* Ändrar färg på sidorna när sidan förminskas */ 
 
@@ -566,6 +659,7 @@ footer ul li a:hover {
     nav button#close-menu-btn {
         display: none;
     }
+    
 
     .nav_menu {
         position: fixed;
@@ -667,6 +761,78 @@ footer ul li a:hover {
         padding: 1rem;
     }
 
+    .header_Teknikrubrik {
+        margin-top: -30rem;
+        background: var(--color-bg2);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+        
+        
+    
+    }
+    
+    /*=================== Tekniksida ====================== */
+    .tekniksida-1 {
+        margin: 10rem 0 10rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    
+    }
+    
+    .tekniksida-2 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1); 
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    }
+    
+    .tekniksida-3 {
+        margin: 15rem 0 15rem; 
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    }
+    .tekniksida-4 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    }
+    .tekniksida-5 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+        
+    }
+    
+    
+    .tekniksida-6 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+        
+        
+      
+    }
+    .tekniksidor {
+        background: var(--color-bg2);
+        margin-top: -20rem;
+        line-height: 10;
+    }
+    
+    .tekniksidor h1   {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    
+    .tekniksidor p {
+        text-align: center;
+    }
+    .tekniksidor_container {
+        display: grid;
+        
+    }
+
 }
 
 /*=================== Media Queries Telefon ====================== */   
@@ -704,6 +870,7 @@ footer ul li a:hover {
     .kategori {
         padding: 1rem;
         border-radius: 1rem;
+        
     }
 
     /*=================== Historia ====================== */ 
@@ -751,6 +918,276 @@ footer ul li a:hover {
 
     .footer_1 p {
         margin: 1rem auto;
+    }
+
+    .header_Teknikrubrik {
+        margin-top: -30rem;
+        background: var(--color-bg2);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+        
+        
+    
+    }
+    
+    /*=================== Tekniksida ====================== */
+    .tekniksida-1 {
+        margin: 10rem 0 10rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    
+    }
+    
+    .tekniksida-2 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1); 
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    }
+    
+    .tekniksida-3 {
+        margin: 15rem 0 15rem; 
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    }
+    .tekniksida-4 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    }
+    .tekniksida-5 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+        
+    }
+    
+    
+    .tekniksida-6 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+        
+        
+      
+    }
+    .tekniksidor {
+        background: var(--color-bg2);
+        margin-top: -20rem;
+        line-height: 10;
+    }
+    
+    .tekniksidor h1   {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    
+    .tekniksidor p {
+        text-align: center;
+    }
+    .tekniksidor_container {
+        display: grid;
+        
+    }
+}
+
+/*=================== Media Queries Laptop ====================== */   
+@media screen and (max-width: 1240px) {
+    .container {
+        width: var(--container-width-lg);
+    }
+    /*=================== Navbar ====================== */ 
+    .nav_menu {
+        right: 3%;
+    }
+
+    /*=================== Header ====================== */ 
+    header {
+        height: 110vh;
+    }
+
+    .header_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+
+    }
+
+    .header_vänstersida p {
+        margin-bottom: 1.3rem; 
+    }
+
+    /*=================== Kategorier ====================== */ 
+    .kategorier_högersida {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .kategori {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    /*=================== Historia ====================== */ 
+    .Historier {
+        height: 150rem;
+        margin: 20rem 0 20rem; 
+        line-height: 3;
+        
+    }
+
+    .Historia {
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -14rem;
+    }
+
+    .Historier h2 {
+        line-height: 4;
+        margin: 5rem 0 15rem;
+    }
+
+
+    .Historia_container {
+        grid-template-columns: 1fr;
+        gap: 21rem;
+        margin-top: 15rem;
+        
+    }
+
+    .Historier-sida {
+        height: 370rem;  
+       margin-top: 20rem;
+    }
+
+
+        /*=================== FAQs ====================== */
+    .faqs_container {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq {
+        padding: 1.5rem;
+    }
+    
+    .faqs {
+        height: 95rem;
+        margin-top: 40rem;
+        margin: 15rem 0 15rem;
+    }
+    
+    
+    /*=================== Laget ====================== */ 
+    .Laget_container {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem; 
+        
+    }
+
+    .Laget {
+        height: 50rem;
+        margin: 20rem 0 20rem;
+        
+    }
+
+    .Laget h2 {
+        margin-top: 1rem;
+    }
+
+    .Medlem_Laget {
+        padding: 0;
+    }
+
+    .Medlem_Laget p {
+        margin-bottom: 1.5rem; 
+    }
+
+
+
+    /*=================== Footer ====================== */ 
+    .footer_container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+
+    }
+
+    .footer_1 p {
+        margin: 1rem auto;
+    }
+    .header_Teknikrubrik {
+        margin-top: -30rem;
+        background: var(--color-bg2);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+        
+        
+    
+    }
+    
+    /*=================== Tekniksida ====================== */
+    .tekniksida-1 {
+        margin: 10rem 0 10rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    
+    }
+    
+    .tekniksida-2 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1); 
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    }
+    
+    .tekniksida-3 {
+        margin: 15rem 0 15rem; 
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    }
+    .tekniksida-4 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+       
+    }
+    .tekniksida-5 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+        
+    }
+    
+    
+    .tekniksida-6 {
+        margin: 15rem 0 15rem;
+        background: var(--color-bg1);
+        box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+        
+        
+      
+    }
+    .tekniksidor {
+        background: var(--color-bg2);
+        margin-top: -20rem;
+        line-height: 2.5;
+        text-align: left; 
+    }
+    
+    .tekniksidor h1   {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    
+    .tekniksidor p {
+        text-align: center;
+    }
+    .tekniksidor_container {
+        display: grid;  
     }
 }
 
