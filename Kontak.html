@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Title>Teknik</title>
+    <link href="teststyle.css" rel="stylesheet">
+    
+
+    <!-- IconScout där iconerna är tagna -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <!-- Google Fonts som är använda -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <div class="container nav_container"> 
+            <a href="testhtml.html"><h4>Ormesberga och Ör<span1> byanät</span1></h4></a>
+            <ul class="nav_menu">      <!--Här hittar ni listan -->
+                <li><a href="testhtml.html">Hem</a></li>
+                <li><a href="Teknik.html"><span>Teknik</span></a></li> <!--Här används span för olika färger på länkarna -->
+                <li><a href="Historia.html">Historia</a></li>
+                <li><a href="Om.html"><span>Om</span></a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="uil uil-bars"></i></button>  <!--både open och close menu kan man använda för iconer -->
+            <button id="close-menu-btn"><i class="uil uil-multiply"></i></button>
+        </div>
+    </nav>
+    <!--=====================NAV slutar här=====================-->
+
+    <section class="kontakt">
+        <div class="container kontakt_container">
+            <aside class="kontakt_aside">
+                <div class="aside_img">
+                </div>
+                <h2>Kontakta oss: </h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, saepe!</p>
+
+                <ul class="kontakt_detaljer">
+                    <li>
+                        <i class="uil uil-phone"></i>
+                        <h5>+111111111111</h5>  
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        <h5>daek03001@utb.vaxjo.se</h5> 
+                    </li>
+
+                    <li>
+                        <i class="uil uil-location-point"></i>
+                        <h5>Ormesberga</h5> 
+                    </li>
+                </ul>
+            </aside>
+
+            <form action ="https://formspree.io/f/xbjwppwg" method="POST" class="kontakt_form">
+                <div class="form_namn">
+                    <input type="text" name="Förnamn" placeholder="Förnamn" required>
+                    <input type="text" name="Efternamn" placeholder="Efternamn" required>
+                </div>
+                <input type="email" name="Mail Address" placeholder="Din Email Address" required>
+                <textarea name="Message" rows="7" placeholder="Meddelande" required> </textarea>
+                <button type="submit" class="btn btn-primary">Send Message </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer_container">
+            <div class="footer_1">
+                <a href="index.html" class="footer_logo"><h4>Gjord av:</h4></a>
+                <p>David Ekstedt</p>
+            </div>
+
+            <div class="footer_2">
+                <h4>Links:</h4>
+                <ul class="Links">
+                    <li><a href="testhtml.html">Hem</a></li>
+                    <li><a href="Teknik.html">Teknik</a></li> 
+                    <li><a href="Historia.html">Historia</a></li>
+                    <li><a href="Om.html">Om</a></li>
+                    <li><a href="Kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_3">
+                <h4>Privacy:</h4>
+                <ul class="Privacy">
+                    <li><a href="#">Privacy policy </a></li>
+                    <li><a href="#">Privacy policy </a></li>
+                    <li><a href="#">Privacy policy </a></li>
+                </ul>
+            </div>
+
+            <div class="footer_4">
+                <h4>Kontakta oss:</h4>
+                <div>
+                    <p>Telefon +00 0000 000 0000</p>
+                    <p>Gmail Daek03001@utb.vaxjo.se</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--=====================Footer slutar här=================== -->
+
+    <!--=====================Script börjar här=================== -->
+    <script src="JavaScript.js"></script>
+</body>
+</html>
